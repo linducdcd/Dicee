@@ -28,7 +28,9 @@ class ViewController: UIViewController {
         updateDiceImage()
 
     }
-    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        updateDiceImage()
+    }
     
     func updateDiceImage() {
         randomDiceR = Int(arc4random_uniform(6))
