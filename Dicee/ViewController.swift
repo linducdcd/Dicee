@@ -9,12 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    //MARK: - var an Arrays
     var randomDiceR : Int = 0
     var randomDiceL : Int = 0
     
     let diceArray = ["dice1" , "dice2" , "dice3" , "dice4" , "dice5" , "dice6" ]
     
+    //MARK: - Outlets And Action
     @IBOutlet weak var diceOutletR: UIImageView!
     
     @IBOutlet weak var diceOutletL: UIImageView!
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         updateDiceImage()
     }
-    
+    //MARK: - main function with all formul
     func updateDiceImage() {
         randomDiceR = Int(arc4random_uniform(6))
         randomDiceL = Int(arc4random_uniform(6))
